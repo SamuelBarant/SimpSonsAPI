@@ -20,8 +20,6 @@ La idea es practicar y aplicar todo lo que he ido aprendiendo, haciendo una app 
 * **Retrofit**
 * **Coroutines + Flow**
 * **ViewModel + LiveData**
-* **Material Design 3**
-* **JUnit / Mockito**
 
 ## Estructura
 
