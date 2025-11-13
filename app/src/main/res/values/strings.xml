@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SimpSonsApi</string>
+    <string name="titleApp">Los Simpsons</string>
+    <string name="subtitleList">Explora todos los personajes de Springfield</string>
 </resources>
