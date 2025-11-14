@@ -2,4 +2,13 @@
     <string name="app_name">SimpSonsApi</string>
     <string name="titleApp">Los Simpsons</string>
     <string name="subtitleList">Explora todos los personajes de Springfield</string>
+    <string name="labelAgeCharacter">Edad: </string>
+    <string name="labelGenderCharacter">Género: </string>
+    <string name="labelOccupationCharacter">Occupación: </string>
+    <string name="labelStateCharacter">Estado: </string>
+    <string name="labelBirthdateCharacter">Fecha de nacimiento: </string>
+    <string name="labelPhrasesCharacter">Frases icónicas </string>
+    <string name="text_with_prefix">" %1$s!</string>
+    <string name="text_with_suffix">%1$s "</string>
+    <string name="exitButtonDescription">Boton para salir al listado principal de los personajes.</string>
 </resources>
