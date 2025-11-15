@@ -9,7 +9,7 @@ import barant.curso.simpsonsapi.feature.character.domain.Character
 import barant.curso.simpsonsapi.feature.character.domain.GetCharacterUseCase
 import kotlinx.coroutines.launch
 
-class CharacterViewModel(private val getAll: GetCharacterUseCase) : ViewModel(){
+class CharacterListViewModel(private val getAll: GetCharacterUseCase) : ViewModel(){
 
     data class UiState(
         val isLoading: Boolean = false,

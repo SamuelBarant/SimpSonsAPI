@@ -1,21 +1,24 @@
 package barant.curso.simpsonsapi.feature.character.presentation.list.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.core.R
 import barant.curso.simpsonsapi.feature.character.domain.Character
 import androidx.recyclerview.widget.RecyclerView
 import barant.curso.simpsonsapi.databinding.ItemCharacterListBinding
 
-class CharacterAdapter(private val list: List<Character>) :
-    RecyclerView.Adapter<CharacterAdapter.ViewHolder>() {
+class CharacterListItemAdapter(private val list: List<Character>, private val onItemClick: (Character) -> Unit) :
+    RecyclerView.Adapter<CharacterListItemAdapter.ViewHolder>() {
     class ViewHolder(private val binding: ItemCharacterListBinding) : RecyclerView.ViewHolder(binding.root){
-        fun bind(character: Character){
+        fun bind(character: Character, onItemClick: (Character) -> Unit){
             binding.nameCharacter.text = character.name
             binding.occupationCharacter.text = character.occupation
-            binding.ageCharacter.text = "( " + character.age.toString() + " )"
+            binding.ageCharacter.text = character.age.toString().plus(" ").plus(
+                binding.root.context.getString(barant.curso.simpsonsapi.R.string.ageSuffix)
+            )
             binding.genderCharacter.text = character.gender
-            binding.phraseCharacter.text = character.phrase
-
+            binding.phraseCharacter.text = character.phrase[0]
+            binding.root.setOnClickListener {
+                onItemClick(character)
+            }
         }
     }
 
@@ -25,7 +28,7 @@ class CharacterAdapter(private val list: List<Character>) :
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bind(list[position])
+        holder.bind(list[position], onItemClick)
     }
 
     override fun getItemCount(): Int = list.size

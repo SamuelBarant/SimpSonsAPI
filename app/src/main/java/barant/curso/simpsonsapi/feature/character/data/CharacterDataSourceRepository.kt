@@ -10,4 +10,9 @@ class CharacterDataSourceRepository (private val api: CharacterApiDataRemoteSour
     override suspend fun getCharacter(): Result<List<Character>> {
         return api.getCharacter()
     }
+
+    override suspend fun getByIdCharacter(id: Int): Result<Character> {
+        return api.getByIdCharacter(id)
+    }
+
 }
