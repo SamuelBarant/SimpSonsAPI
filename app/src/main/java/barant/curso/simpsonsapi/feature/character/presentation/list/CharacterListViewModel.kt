@@ -6,10 +6,10 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import barant.curso.simpsonsapi.core.error.ErrorApp
 import barant.curso.simpsonsapi.feature.character.domain.Character
-import barant.curso.simpsonsapi.feature.character.domain.GetCharacterUseCase
+import barant.curso.simpsonsapi.feature.character.domain.GetAllCharacterUseCase
 import kotlinx.coroutines.launch
 
-class CharacterListViewModel(private val getAll: GetCharacterUseCase) : ViewModel(){
+class CharacterListViewModel(private val getAll: GetAllCharacterUseCase) : ViewModel(){
 
     data class UiState(
         val isLoading: Boolean = false,

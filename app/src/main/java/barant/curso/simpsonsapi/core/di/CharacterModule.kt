@@ -6,8 +6,7 @@ import barant.curso.simpsonsapi.feature.character.data.local.sharedPreference.Ch
 import barant.curso.simpsonsapi.feature.character.data.remote.api.CharacterApiDataRemoteSource
 import barant.curso.simpsonsapi.feature.character.domain.CharacterRepository
 import barant.curso.simpsonsapi.feature.character.domain.GetByIdCharacterUseCase
-import barant.curso.simpsonsapi.feature.character.domain.GetCharacterUseCase
-import barant.curso.simpsonsapi.feature.character.presentation.details.CharacterDetailFragment
+import barant.curso.simpsonsapi.feature.character.domain.GetAllCharacterUseCase
 import barant.curso.simpsonsapi.feature.character.presentation.details.CharacterDetailViewModel
 import barant.curso.simpsonsapi.feature.character.presentation.list.CharacterListViewModel
 import org.koin.core.module.dsl.viewModel
@@ -18,7 +17,7 @@ val characterModule = module {
     single { CharacterRoomDataLocalSource() }
     single { CharacterApiDataRemoteSource() }
     single <CharacterRepository>{ CharacterDataSourceRepository(get(),get(),get()) }
-    factory { GetCharacterUseCase(get()) }
+    factory { GetAllCharacterUseCase(get()) }
     factory { GetByIdCharacterUseCase(get()) }
     viewModel { CharacterListViewModel(get()) }
     viewModel { CharacterDetailViewModel(get()) }

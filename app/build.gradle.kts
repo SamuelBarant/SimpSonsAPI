@@ -41,6 +41,13 @@ android {
 }
 
 dependencies {
+    // Unit test
+    testImplementation("junit:junit:4.13.2")
+    // MockK
+    testImplementation("io.mockk:mockk:1.14.6")
+    // Corrutinas (si usas coroutines)
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.3")
+
     //Koin
     implementation(libs.koin.android)
     implementation(libs.koin.core)
